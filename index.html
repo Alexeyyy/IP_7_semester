@@ -1,0 +1,79 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="plugins/chart/Chart.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/app_script.js"></script>
+</head>
+<body>
+	<div class="site-wraper">
+		<div class="header-wrapper">
+			<header>
+				<div id="header-logo">
+					<img src="images/transistor-white.png">
+				</div>
+				<nav>
+					<ul>
+						<li><a href="index.html">Построение графиков</a></li>
+						<li><a href="manual.html">Теоретическая часть</a></li>
+					</ul>
+				</nav>
+				<div class="clear-both"/>
+			</header>
+		</div>
+		
+		<div id="main-wrapper">
+			<div id="main">
+				<h1>
+					Построение графиков зависимостей
+				</h1>
+
+				<div class="form-area">
+					<form>
+						<fieldset>
+							<legend>Параметры</legend>
+							<div class="form-item">
+								<span class="description">Выберете интересующий стабилитрон:</span>					
+								<select id="stabilitron-selector">
+								</select>
+							</div>
+							<!--<div class="build-btn-container">
+								<a id="build-up" class="button" href="#">Submit</a>
+							</div>-->
+						</fieldset>
+					</form>
+				</div>
+
+				<section id="charts">
+					<div class="chart-area">
+						<canvas id="myCanvas" width="450px" height="450px">
+						</canvas>
+						<h3>График зависимости 1</h3>
+					</div>
+					<div class="chart-area right-margin-zero">
+						<canvas id="myCanvas" width="450px" height="450px"></canvas>
+						<h3>График зависимости 2</h3>
+					</div>
+					<div class="chart-area">
+						<canvas id="myCanvas" width="450px" height="450px"></canvas>
+						<h3>График зависимости 3</h3>
+					</div>
+					<div class="chart-area right-margin-zero">
+						<canvas id="myCanvas" width="450px" height="450px"></canvas>
+						<h3>График зависимости 4</h3>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<div id="footer-wrapper">
+			<footer>
+				<p>
+					©copyright Разработано в 311 аудитории... Все вопросы туда :)
+				</p>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>
