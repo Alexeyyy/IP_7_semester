@@ -66,7 +66,7 @@ nav > ul > li > a:hover {
 
 #main {
 	padding: 10px;
-	width: 1000px;
+	width: 1280px;
 	margin: 0 auto 0 auto;
 }
 
@@ -163,6 +163,23 @@ a.button:hover {
 .oX {
 	text-align: right;
 }
+
+#dependencies-container {
+	width: 90%;
+	margin: 10px auto 30px auto;
+}
+
+table {
+	width: 100%;
+	table-layout:fixed;
+}
+
+table td {
+	padding: 5px;
+	text-align: center;
+	word-wrap:break-word;
+}
+
 
 
 
