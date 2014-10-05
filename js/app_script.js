@@ -309,7 +309,10 @@ interpolateValues = function(stabilitron) {
 
 		for(var i = 0; i < stabilitron.dependencies[k].valuesX.length - 1; i++) {
 			//следуюшая и текущая точки должны гарнатированно существовать (искл. null)
-			if(stabilitron.dependencies[k].valuesY[i] && stabilitron.dependencies[k].valuesY[i + 1]) {
+			if(stabilitron.dependencies[k].valuesY[i] 
+				&& stabilitron.dependencies[k].valuesY[i + 1] 
+				|| stabilitron.dependencies[k].valuesY[i] == 0
+				|| stabilitron.dependencies[k].valuesY[i + 1] == 0) {
 				result.push(commitLineEquation(stabilitron.dependencies[k].valuesX[i], 
 											   stabilitron.dependencies[k].valuesY[i], 
 											   stabilitron.dependencies[k].valuesX[i + 1], 
@@ -347,12 +350,13 @@ commitLineEquation = function(x1, y1, x2, y2, pace, max_x) {
 	return interpolateValues;
 }
 
+//Формирует таблицу по данным значениям
 formTable = function(data, operand_1, operand_2, condition) {
 	var $container = $('#dependencies-container');
 	var newTable = "";
 	newTable = newTable.concat('<h3>Таблица зависимости ' + operand_1 
 								+ ' от ' + operand_2 
-								+ (condition == "" ? "" : ' (Доп. условие:' + condition + ')') 
+								+ (condition == "" ? "" : ' (Доп. условие: ' + condition + ')') 
 								+'</h3>');
 	newTable = newTable.concat('<table border="1">');
 
