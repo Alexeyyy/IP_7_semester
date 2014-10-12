@@ -180,6 +180,15 @@ table td {
 	word-wrap:break-word;
 }
 
+#UctForm {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+}
+
 
 
 

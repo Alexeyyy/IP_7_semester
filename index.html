@@ -1,4 +1,4 @@
-<html>
+п»ї<html>
 <head>
 	<link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
@@ -15,26 +15,26 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="index.html">Построение графиков</a></li>
-						<li><a href="manual.html">Теоретическая часть</a></li>
+						<li><a href="index.html">РџРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєРѕРІ</a></li>
+						<li><a href="manual.html">РўРµРѕСЂРµС‚РёС‡РµСЃРєР°СЏ С‡Р°СЃС‚СЊ</a></li>
 					</ul>
 				</nav>
 				<div class="clear-both"/>
 			</header>
 		</div>
 		
-		<div id="main-wrapper">
+		<div class="main-wrapper">
 			<div id="main">
 				<h1>
-					Построение графиков зависимостей
+					РџРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєРѕРІ Р·Р°РІРёСЃРёРјРѕСЃС‚РµР№
 				</h1>
 
 				<div class="form-area">
 					<form>
 						<fieldset>
-							<legend>Параметры</legend>
+							<legend>РџР°СЂР°РјРµС‚СЂС‹</legend>
 							<div class="form-item">
-								<span class="description">Выберете интересующий стабилитрон:</span>					
+								<span class="description">Р’С‹Р±РµСЂРµС‚Рµ РёРЅС‚РµСЂРµСЃСѓСЋС‰РёР№ СЃС‚Р°Р±РёР»РёС‚СЂРѕРЅ:</span>					
 								<select id="stabilitron-selector">
 								</select>
 							</div>
@@ -49,33 +49,97 @@
 					<div class="chart-area">
 						<canvas id="myCanvas" width="450px" height="450px">
 						</canvas>
-						<h3>График зависимости 1</h3>
+						<h3>Р“СЂР°С„РёРє Р·Р°РІРёСЃРёРјРѕСЃС‚Рё 1</h3>
 					</div>
 					<div class="chart-area right-margin-zero">
 						<canvas id="myCanvas" width="450px" height="450px"></canvas>
-						<h3>График зависимости 2</h3>
+						<h3>Р“СЂР°С„РёРє Р·Р°РІРёСЃРёРјРѕСЃС‚Рё 2</h3>
 					</div>
 					<div class="chart-area">
 						<canvas id="myCanvas" width="450px" height="450px"></canvas>
-						<h3>График зависимости 3</h3>
+						<h3>Р“СЂР°С„РёРє Р·Р°РІРёСЃРёРјРѕСЃС‚Рё 3</h3>
 					</div>
 					<div class="chart-area right-margin-zero">
 						<canvas id="myCanvas" width="450px" height="450px"></canvas>
-						<h3>График зависимости 4</h3>
+						<h3>Р“СЂР°С„РёРє Р·Р°РІРёСЃРёРјРѕСЃС‚Рё 4</h3>
 					</div>
 				</section>
 			</div>
 		</div>
 
 		<div id="dependencies-wrapper">
+			<h1>
+				Р—РЅР°С‡РµРЅРёСЏ, РїРѕР»СѓС‡РµРЅРЅС‹Рµ СЃ РіСЂР°С„РёРєРѕРІ
+			</h1>
 			<section id="dependencies-container">
 			</section>
+		</div>
+
+		<div class="main-wrapper">
+			<div class="form-area" id="UctForm">
+					<h1>
+						Р Р°СЃС‡РµС‚ UСЃС‚.
+					</h1>
+				<form>
+					<fieldset>
+						<legend>Р Р°СЃС‡РµС‚ UСЃС‚.</legend>
+						<div class="form-item">
+							<span class="description">Р’РІРµРґРёС‚Рµ Umin (Р’):</span>
+							<input id="Umin" type="text"/>					
+						</div>
+						<div class="form-item">
+							<span class="description">Р’РІРµРґРёС‚Рµ Umax (Р’):</span>
+							<input id="Umax" type="text"/>					
+						</div>
+						<div class="form-item">
+							<span class="description">Р’РІРµРґРёС‚Рµ Imin (РјРђ):</span>
+							<input id="Imin" type="text"/>					
+						</div>
+						<div class="form-item">
+							<span class="description">Р’РІРµРґРёС‚Рµ Imax (РјРђ):</span>
+							<input id="Imax" type="text"/>					
+						</div>
+						<div class="form-item">
+							<span class="description">Р’РІРµРґРёС‚Рµ Rmin (РћРј):</span>
+							<input id="Rmin" type="text"/>					
+						</div>
+						<div class="form-item">
+							<span class="description">Р’РІРµРґРёС‚Рµ Rmax (РћРј):</span>
+							<input id="Rmax" type="text"/>	
+						</div>
+
+						<div class="form-item">
+							<span class="description">Р’РІРµРґРёС‚Рµ Tmin (вЃ°РЎ):</span>
+							<input id="Tmin" type="text"/>	
+						</div>
+						<div class="form-item">
+							<span class="description">Р’РІРµРґРёС‚Рµ Tmax (вЃ°РЎ):</span>
+							<input id="Tmax" type="text"/>					
+						</div>
+						<div class="form-item">
+							<span class="description">Р’РІРµРґРёС‚Рµ О± (%/вЃ°РЎ):</span>
+							<input id="Alpha" type="text"/>					
+						</div>
+						<div class="form-item">
+							<span class="description">Р’РІРµРґРёС‚Рµ T (вЃ°РЎ):</span>
+							<input id="TemperatureVal" type="text"/>				
+						</div>
+						<div class="form-item">
+							<span class="description">Р’РІРµРґРёС‚Рµ I (РјРђ):</span>
+							<input id="CurrentVal" type="text"/>					
+						</div>
+						<div class="build-btn-container">
+							<a id="calculate-uct" class="button" href="#">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ</a>
+						</div>
+					</fieldset>
+				</form>
+			</div>
 		</div>
 
 		<div id="footer-wrapper">
 			<footer>
 				<p>
-					©copyright Разработано в 311 аудитории... Все вопросы туда :)
+					В©copyright Р Р°Р·СЂР°Р±РѕС‚Р°РЅРѕ РІ 311 Р°СѓРґРёС‚РѕСЂРёРё... Р’СЃРµ РІРѕРїСЂРѕСЃС‹ С‚СѓРґР° :)
 				</p>
 			</footer>
 		</div>

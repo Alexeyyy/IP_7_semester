@@ -5,7 +5,7 @@ var stabilitrons = [
 		dependencies: [
 			{
 				oY: "Rст., Ом",
-				oX: "T, C",
+				oX: "T, ⁰С",
 				description: "График зависимости Rcт. от T.",
 				valuesY: [6.5, 6.7, 6.9, 7.2, 8.0],
 				valuesX: [-60, -30, 0, 30, 60],
@@ -18,25 +18,25 @@ var stabilitrons = [
 				description: "График зависимости Rcт. от Iст.",				
 				valuesY: [null, 14.0, 8.4, 5.5, 4.1, 3.2, null],
 				valuesX: [0, 1, 5, 10, 15, 20, 25],
-				condition: "T = +25 C",
+				condition: "T = +25 ⁰С",
 				pace: 1	
 			},
 			{
-				oY: "α, %/C",
+				oY: "α, %/⁰С",
 				oX: "Iст., мА",
 				description: "График зависимости α от Iст.",				
 				valuesY: [null, 7.0, 7.2, 7.4, 7.6, 7.8, null],
 				valuesX: [0, 2.5, 5, 10, 15, 20, 25],
-				condition: "T = -60 ... +30 C",
+				condition: "T = -60 ... +30 ⁰С",
 				pace: 1		
 			},
 			{
-				oY: "α, %/C",
+				oY: "α, %/⁰С",
 				oX: "Iст., мА",
 				description: "График зависимости α от I.",			
 				valuesY: [null, 0.054, 0.051, 0.048, 0.045, 0.042, null],
 				valuesX: [0, 2.9, 5, 10, 15, 20, 25],
-				condition: "T = +30 ... +125 C",
+				condition: "T = +30 ... +125 ⁰С",
 				pace: 1			
 			}
 		],
@@ -45,12 +45,12 @@ var stabilitrons = [
 		name: "D814A",
 		dependencies: [
 			{
-				oY: "α, %/C",
+				oY: "α, %/⁰С",
 				oX: "Iст., мА",
 				description: "График зависимости α от Iст.",				
 				valuesY: [null, 0.052, 0.0522, 0.0524, 0.0526, 0.0528, 0.053, null],
 				valuesX: [0, 3, 4, 6, 8, 10, 12, 14],
-				condition: "T = -60 ... +30 C",	
+				condition: "T = -60 ... +30 ⁰С",	
 				pace: 1	
 			},
 			{
@@ -64,7 +64,7 @@ var stabilitrons = [
 			},
 			{
 				oY: "Rст., Ом",
-				oX: "T, C",
+				oX: "T, ⁰С",
 				description: "График зависимости Rcт. от T.",				
 				valuesY: [ 2.1, 2.4, 2.7, 3.0, 3.3, 3.6, 3.9],
 				valuesX: [-60, -30, 0, 30, 60, 90, 120],
@@ -77,7 +77,7 @@ var stabilitrons = [
 		name: "D814D",
 		dependencies: [
 			{
-				oY: "α, %/C",
+				oY: "α, %/⁰С",
 				oX: "Iст., мА",
 				description: "График зависимости α от Iст.",
 				valuesY: [null, 0.0745, 0.075, 0.076, 0.077, null],
@@ -96,7 +96,7 @@ var stabilitrons = [
 			},
 			{
 				oY: "Rcm, Om",
-				oX: "T, C",
+				oX: "T, ⁰С",
 				description: "График зависимости Rcm. от T.",				
 				valuesY: [6.6, 7.2, 7.8, 8.3, 9.0],
 				valuesX: [-60, -30, 0, 30, 60],
@@ -114,7 +114,7 @@ var stabilitrons = [
 				description: "График зависимости Rcт. от Iст.",
 				valuesY: [null, 144, 94, 60, 43, null],
 				valuesX: [0, 2.5, 5.0, 7.5, 10, 12.5],
-				condition: "T = -60 C",
+				condition: "T = -60 ⁰С",
 				pace: 1
 			},
 			{
@@ -123,7 +123,7 @@ var stabilitrons = [
 				description: "График зависимости Rcт. от Iст.",				
 				valuesY: [null, 129, 85, 64, 56, null],
 				valuesX: [0, 2.8, 5.0, 7.5, 10.0, 12.5],
-				condition: "T = +25 C",
+				condition: "T = +25 ⁰С",
 				pace: 1	
 			},
 			{
@@ -132,16 +132,16 @@ var stabilitrons = [
 				description: "График зависимости Rcт от Iст.",				
 				valuesY: [null, 115, 79, 59, 44, null],
 				valuesX: [0, 2.7, 5.0, 7.5, 10, 12.5],
-				condition: "T = +125 C",
+				condition: "T = +125 ⁰С",
 				pace: 1		
 			},
 			{
-				oY: "α, %/C",
+				oY: "α, %/⁰С",
 				oX: "Iст., мА",
 				description: "График зависимости α от Iст.",			
 				valuesY: [0.01, 0.00, -0.01, -0.02],
 				valuesX: [5, 10, 15, 18],
-				condition: "T = -60 ... + 125 C",
+				condition: "T = -60 ... + 125 ⁰С",
 				pace: 1			
 			}
 		],
@@ -155,7 +155,7 @@ var stabilitrons = [
 				description: "График зависимости Rcт. от Iст.",
 				valuesY: [null, 60, 35, 19, 16, null],
 				valuesX: [0, 2.5, 5.0, 7.5, 10, 12.5],
-				condition: "T = -60 C",
+				condition: "T = -60 ⁰С",
 				pace: 1
 			},
 			{
@@ -164,7 +164,7 @@ var stabilitrons = [
 				description: "График зависимости Rcт. от Iст.",				
 				valuesY: [null, 83, 50, 28, 22, null],
 				valuesX: [0, 2.8, 5.0, 7.5, 10, 12.5],
-				condition: "T = +25 C",
+				condition: "T = +25 ⁰С",
 				pace: 1	
 			},
 			{
@@ -173,16 +173,16 @@ var stabilitrons = [
 				description: "График зависимости Rcт. от Iст.",				
 				valuesY: [null, 108, 69, 38, 25, null],
 				valuesX: [0, 2.6, 5.0, 7.5, 10.0, 12.5],
-				condition: "T = +125 C",
+				condition: "T = +125 ⁰С",
 				pace: 1		
 			},
 			{
-				oY: "α, %/C",
+				oY: "α, %/⁰С",
 				oX: "Iст., мА",
 				description: "График зависимости α от I.",			
 				valuesY: [0.01, 0, -0.01, -0.014],
 				valuesX: [5.0, 10.0, 15.0, 20.0],
-				condition: "T = -60 ... + 125 C",
+				condition: "T = -60 ... + 125 ⁰С",
 				pace: 1			
 			}
 		],
@@ -196,7 +196,7 @@ var stabilitrons = [
 				description: "График зависимости Rcт. от Iст.",
 				valuesY: [null, 14, 12, 10, 9, null],
 				valuesX: [0, 2.5, 5.0, 7.5, 10, 12.5],
-				condition: "T = -60 C",
+				condition: "T = -60 ⁰С",
 				pace: 1
 			},
 			{
@@ -205,7 +205,7 @@ var stabilitrons = [
 				description: "График зависимости Rcт. от Iст.",				
 				valuesY: [null, 23, 16, 13, 11, null],
 				valuesX: [0, 2.5, 5.0, 7.5, 10, 12.5],
-				condition: "T = +25 C",	
+				condition: "T = +25 ⁰С",	
 				pace: 1
 			},
 			{
@@ -214,16 +214,16 @@ var stabilitrons = [
 				description: "График зависимости Rcт. от Iст.",				
 				valuesY: [null, 24, 19, 14, 12, null],
 				valuesX: [0, 2.7, 5.0, 7.5, 10, 12.5],
-				condition: "T = +125 C",		
+				condition: "T = +125 ⁰С",		
 				pace: 1
 			},
 			{
-				oY: "α, %/C",
+				oY: "α, %/⁰С",
 				oX: "Iст., мА",
 				description: "График зависимости α от I.",			
 				valuesY: [0.01, 0, -0.009],
 				valuesX: [5.0, 10, 15],
-				condition: "T = -60 ... + 125 C",
+				condition: "T = -60 ... + 125 ⁰С",
 				pace: 1			
 			}
 		],
@@ -340,7 +340,7 @@ commitLineEquation = function(x1, y1, x2, y2, pace, max_x) {
 	for(var x = x1, i = 0; x < x2; x += pace, i++) {
 		interpolateValues.valuesX[i] = x;
 		interpolateValues.valuesY[i] = a * x + b;
-		if(x2 == max_x)
+		if(x2 == max_x)1
 		{
 			interpolateValues.valuesX[i + 1] = x2;
 			interpolateValues.valuesY[i + 1] = a * x2 + b;
@@ -383,6 +383,93 @@ formTable = function(data, operand_1, operand_2, condition) {
 } 
 //*********************************************************************************************************************
 
+//***********************************Расчет напряжения стабилизации****************************************************
+//Возвращает диапазон
+getRange = function(left, right) {
+	var range = {
+		left: left,
+		center: (right + left) / 2,
+		right: right,
+		shift: (right + left) / 2 - left
+	};
+
+	return range;
+}
+
+//Берем среднее значение
+getAverageValue = function() {
+	if(arguments.length == 0) 
+		return null;
+
+	var sum = 0;
+	for(var i = 0; i < arguments.length; i++) {
+		sum += arguments[i];
+	}
+	
+	return sum/arguments.length;
+}
+
+//*****************Расчет y-ов и x-ов***********************
+getY1 = function(Uav) {
+	return Uav;
+}
+
+getY2 = function(alpha, Uav, Trange, Tpace) {
+	var y2 = Uav;
+	for(var i = Trange.left; i <= Trange.right; i += Tpace) {
+		y2 += (y2 * alpha * Tpace / 100);
+	}
+	return y2;
+}
+
+getY3 = function(Uav, Imin, Imax, Rav) {
+	//Math.pow(10, -3) - т.к. мА
+	return Uav + (Imax - Imin) * Math.pow(10, -3) * Rav;   
+}
+
+getY4 = function(deltaI, deltaT, Uav) {
+	return deltaT + deltaI + Uav;
+}
+
+getX1 = function(T, Trange) {
+	return (T - Trange.center) / Trange.shift;
+}
+
+getX2 = function(I, Irange) {
+	return (I - Irange.center) / Irange.shift;
+}
+//*****************Расчет y-ов***********************
+
+calculateVoltage = function(Umin, Umax, Imin, Imax, Rmin, Rmax, Tmin, Tmax, alpha, T, I) {
+	//средние значения
+	var Uav = getAverageValue(Umin, Umax);
+	var Iav = getAverageValue(Imin, Imax);
+	var Rav = getAverageValue(Rmin, Rmax);
+
+	//диапазоны
+	var Irange = getRange(Imin, Imax);
+	var Trange = getRange(Tmin, Tmax);
+
+	var y1 = getY1(Uav); 
+	var y2 = getY2(alpha, Imin, Imax, Rav);
+	var y3 = getY3(Uav, Imin, Imax, Rav);
+	var y4 = getY4(y2 - Uav, y3 - Uav, Uav);
+
+	var b0 = 1/4 * (y1 + y2 + y3 + y4);
+	var b1 = 1/4 * (-y1 + y2 - y3 + y4);
+	var b2 = 1/4 * (-y1 - y2 + y3 + y4);
+	var b12 = 1/4 * (y1 - y2 - y3 + y4);
+
+	var x1 = getX1(T, Trange);
+	var x2 = getX2(I, Irange);
+
+	var Ust = b0 + b1 * x1 + b2 * x2 + b12 * x1 * x2;
+
+	return Ust;
+} 
+
+//*********************************************************************************************************************
+
 $(function() {
 	$('#charts').html('');
 	$('#dependencies-container').html('');
@@ -402,4 +489,23 @@ $(function() {
 		buildCharts(stabilitrons[index]);
 		interpolateValues(stabilitrons[index]);
 	});
+
+	//alert(calculateVoltage(10, 13.5, 3, 23, 9, 3.4, 30, 120, 0.052, 30, 5));
+
+	$('#calculate-uct').click(function() {
+		var Umin = parseFloat($('#Umin').val());
+		var Umax = parseFloat($('#Umax').val());
+		var Imin = parseFloat($('#Imin').val());
+		var Imax = parseFloat($('#Imax').val());
+		var Rmin = parseFloat($('#Rmin').val());
+		var Rmax = parseFloat($('#Rmax').val());
+		var Tmin = parseFloat($('#Tmin').val());
+		var Tmax = parseFloat($('#Tmax').val());
+		var alpha = parseFloat($('#Alpha').val());
+		var T = parseFloat($('#TemperatureVal').val());
+		var I = parseFloat($('#CurrentVal').val());
+
+		alert("Uст. = " + calculateVoltage(Umin, Umax, Imin, Imax, Rmin, Rmax, Tmin, Tmax, alpha, T, I) + " В.");
+	});
+
 });
