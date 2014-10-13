@@ -1,0 +1,65 @@
+﻿<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/stabilitrons.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="plugins/chart/Chart.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/voltagecalc.js"></script>
+</head>
+<body>
+	<div class="site-wraper">
+		<div class="header-wrapper">
+			<header>
+				<div id="header-logo">
+					<img src="images/transistor-white.png">
+				</div>
+				<nav>
+					<ul>
+						<li><a href="voltage_calculation.html">Расчет Uст.</a></li>
+						<li><a href="index.html">Построение графиков</a></li>
+						<li><a href="manual.html">Теоретическая часть</a></li>
+					</ul>
+				</nav>
+				<div class="clear-both"/>
+			</header>
+		</div>
+		
+		<div class="main-wrapper">
+			<div class="form-area" id="UctForm">
+					<h1>
+						Расчет Uст.
+					</h1>
+				<form>
+					<fieldset>
+						<legend>Расчет Uст.</legend>
+						<div class="form-item">
+							<span class="description">Выберете интересующий стабилитрон:</span>					
+							<select id="stabilitron-selector"></select>
+						</div>
+						<div class="form-item">
+							<span class="description">Введите T (⁰С):</span>
+							<input id="TemperatureVal" type="text"/>				
+						</div>
+						<div class="form-item">
+							<span class="description">Введите I (мА):</span>
+							<input id="CurrentVal" type="text"/>					
+						</div>
+						<div class="build-btn-container">
+							<a id="calculate-uct" class="button" href="#">Рассчитать</a>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+		<div id="footer-wrapper">
+			<footer>
+				<p>
+					©copyright Разработано в 311 аудитории... Все вопросы туда :)
+				</p>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>
