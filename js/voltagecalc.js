@@ -1,4 +1,4 @@
-//***********************************Расчет напряжения стабилизации****************************************************
+﻿//***********************************Расчет напряжения стабилизации****************************************************
 //Возвращает диапазон
 getRange = function(left, right) {
 	var range = {
@@ -78,28 +78,23 @@ calculateVoltage = function(Umin, Umax, Imin, Imax, Rmin, Rmax, Tmin, Tmax, alph
 	var x1 = getX1(T, Trange);
 	var x2 = getX2(I, Irange);
 
-
-
 	var Ust = b0 + b1 * x1 + b2 * x2 + b12 * x1 * x2;
-	alert("Real answer --- " + Ust);
-	var delta = (Math.random() * ((Umax - Umin)/2)).toFixed(4);
-	alert(delta);
-	var index = Math.random();
-	
-	if(index > 0.5)
-		Ust += delta;
-	else
-		Ust -= delta;
 
 	return Ust;
 } 
 
+fillStabilitronsRandoms = function() {
+	for(var i = 0; i < stabilitrons.length; i++) {
+		stabilitrons[i].random = (Math.random() * (stabilitrons[i].Umax - stabilitrons[i].Umin)/2).toFixed(4);
+	}
+} 
 
 //*********************************************************************************************************************
 
 $(function() {
 	fillStabilitronSelector();
-	
+	fillStabilitronsRandoms();
+
 	var $stabilitronSelector = $('#stabilitron-selector');
 	var index = seekByName($stabilitronSelector.val());
 	
@@ -111,10 +106,16 @@ $(function() {
 	$('#calculate-uct').click(function() {
 		var T = parseFloat($('#TemperatureVal').val());
 		var I = parseFloat($('#CurrentVal').val());
-		alert("Uст. = " + calculateVoltage(stabilitrons[index].Umin, stabilitrons[index].Umax, stabilitrons[index].Imin, 
+		var Ust = calculateVoltage(stabilitrons[index].Umin, stabilitrons[index].Umax, stabilitrons[index].Imin, 
 										   stabilitrons[index].Imax, stabilitrons[index].Rmin, stabilitrons[index].Rmax, 
 										   stabilitrons[index].Tmin, stabilitrons[index].Tmax, stabilitrons[index].alpha, 
-										   T, I) + " В.");
-
+										   T, I).toFixed(4);
+		var def = Math.random();
+		console.log("!");
+		/*if(def > 0.5) 
+			Ust += stabilitrons[index].random;
+		else
+			Ust -= stabilitrons[index].random;*/
+		$('#result').html("Результат: Uст. = " + Ust + " В.");
 	});
 });

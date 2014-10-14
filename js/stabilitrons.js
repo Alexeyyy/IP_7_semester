@@ -11,6 +11,7 @@ var stabilitrons = [
 		Tmin: 30,
 		Tmax: 120,
 		alpha: 0.052,
+		random: 0,
 		dependencies: [
 			{
 				oY: "Rст., Ом",
