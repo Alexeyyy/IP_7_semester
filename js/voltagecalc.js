@@ -55,6 +55,21 @@ getX2 = function(I, Irange) {
 }
 //*****************Расчет y-ов***********************
 
+//*****************Правка по временной нестабильности***********************
+timeNonstabilityCorrectness = function(t, stabilitron) {
+	var delta = 0.0; 
+
+	if(t <= stabilitron.tlost1) {
+		delta = stabilitron.Ulost1/stabilitron.tlost1 * t;
+	} else {
+		t -= stabilitron.tlost1;
+		delta = stabilitron.Ulost1 + stabilitron.Ulost2 / stabilitron.tlost2 * t;
+	}
+
+	return delta;
+}
+//*****************Правка по временной нестабильности***********************
+
 calculateVoltage = function(Umin, Umax, Imin, Imax, Rmin, Rmax, Tmin, Tmax, alpha, T, I) {
 	//средние значения
 	var Uav = getAverageValue(Umin, Umax);
@@ -66,7 +81,7 @@ calculateVoltage = function(Umin, Umax, Imin, Imax, Rmin, Rmax, Tmin, Tmax, alph
 	var Trange = getRange(Tmin, Tmax);
 
 	var y1 = getY1(Uav); 
-	var y2 = getY2(alpha, Imin, Imax, Rav);
+	var y2 = getY2(alpha, Uav, Trange, Rav);
 	var y3 = getY3(Uav, Imin, Imax, Rav);
 	var y4 = getY4(y2 - Uav, y3 - Uav, Uav);
 
@@ -106,16 +121,28 @@ $(function() {
 	$('#calculate-uct').click(function() {
 		var T = parseFloat($('#TemperatureVal').val());
 		var I = parseFloat($('#CurrentVal').val());
-		var Ust = calculateVoltage(stabilitrons[index].Umin, stabilitrons[index].Umax, stabilitrons[index].Imin, 
+		var t = parseFloat($('#TimeVal').val());
+		
+		//if(!t && t>=0 || !T && T != 0 || !I && I != 0) {
+		if(isNaN(t) || t < 0 || isNaN(T) || isNaN(I)) {
+			$('#result').html("Введенные значения не верны").css('color','red');
+			return;
+		}
+
+		var Ust = (calculateVoltage(stabilitrons[index].Umin, stabilitrons[index].Umax, stabilitrons[index].Imin, 
 										   stabilitrons[index].Imax, stabilitrons[index].Rmin, stabilitrons[index].Rmax, 
 										   stabilitrons[index].Tmin, stabilitrons[index].Tmax, stabilitrons[index].alpha, 
-										   T, I).toFixed(4);
-		var def = Math.random();
+										   T, I) 
+				   - timeNonstabilityCorrectness(t, stabilitrons[index])).toFixed(4);
+
+		/*var def = Math.random();
 		console.log("!");
-		/*if(def > 0.5) 
+		
+		if(def > 0.5) 
 			Ust += stabilitrons[index].random;
-		else
-			Ust -= stabilitrons[index].random;*/
-		$('#result').html("Результат: Uст. = " + Ust + " В.");
+		else*/
+		Ust -= stabilitrons[index].random;
+
+		$('#result').html("Результат: Uст. = " + Ust + " В.").css('color','green');
 	});
 });
