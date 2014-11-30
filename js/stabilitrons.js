@@ -12,9 +12,9 @@ var stabilitrons = [
 		Tmax: 60,
 		alpha: 0.052,
 		random: 0,
-		Ulost1: 0.240,
+		Ulost1: 0.0240,
 		tlost1: 300,
-		Ulost2: 0.020,
+		Ulost2: 0.0020,
 		tlost2: 600,
 		dependencies: [
 			{
@@ -66,9 +66,9 @@ var stabilitrons = [
 		Tmin: -60,
 		Tmax: 60,
 		alpha: 0.052,
-		Ulost1: 0.170,
+		Ulost1: 0.0170,
 		tlost1: 15,
-		Ulost2: 0.020,
+		Ulost2: 0.0020,
 		tlost2: 20,
 		dependencies: [
 			{
@@ -111,9 +111,9 @@ var stabilitrons = [
 		Tmin: -60,
 		Tmax: 60,
 		alpha: 0.0745,
-		Ulost1: 0.280,
+		Ulost1: 0.0280,
 		tlost1: 15,
-		Ulost2: 0.020,
+		Ulost2: 0.0020,
 		tlost2: 20,
 		dependencies: [
 			{
@@ -156,9 +156,9 @@ var stabilitrons = [
 		Tmin: -60,
 		Tmax: 60,
 		alpha: 0.01,
-		Ulost1: 0.280,
+		Ulost1: 0.0280,
 		tlost1: 300,
-		Ulost2: 0.030,
+		Ulost2: 0.0030,
 		tlost2: 600,
 		dependencies: [
 			{
@@ -210,9 +210,9 @@ var stabilitrons = [
 		Tmin: -60,
 		Tmax: 60,
 		alpha: 0.01,
-		Ulost1: 0.290,
+		Ulost1: 0.0290,
 		tlost1: 300,
-		Ulost2: 0.030,
+		Ulost2: 0.0030,
 		tlost2: 600,
 		dependencies: [
 			{
@@ -264,9 +264,9 @@ var stabilitrons = [
 		Tmin: -60,
 		Tmax: 60,
 		alpha: 0.01,
-		Ulost1: 0.255,
+		Ulost1: 0.0255,
 		tlost1: 300,
-		Ulost2: 0.030,
+		Ulost2: 0.0030,
 		tlost2: 600,
 		dependencies: [
 			{
